@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <title>FACE RECOGNITION</title>
+        <link rel="shortcut icon" href="Img.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+       <link rel="stylesheet" href="style.css">    
+    </head>
+
+    <body>
+        <center>
+            <h1 style="font-size: 60px; font-family: fantasy; text-decoration-line: underline; text-decoration-style: double; text-decoration-color: darkblue; color: blue;">
+                <sup>
+                    <img src="Img.png" style="height: 20%;">
+                </sup>
+                FACE RECOGNITION WEB APP 
+                <sup>
+                    <img src="Img.png" style="height: 20%;">
+                </sup>
+            </h1>
+            <h3 style="color: white;font-weight: bold; border: 1px solid blue; background: darkorange; border-top-left-radius: 15px; border-top-right-radius: 15px; width: 80%;">Model is trained to identify the following:</h3>
+            <div class="container" style="background-color: white; width: 80%; height: fit-content; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+                <h4>Me</h4>
+                <hr>
+                <h4>Mother</h4>
+                <hr>
+                <h4>Father</h4>
+            </div>
+            <br><br>
+            <h3 style="color: white;font-weight: bold; border: 1px solid blue; background: darkorange; border-top-left-radius: 15px; border-top-right-radius: 15px; width: 80%;">Webcam View - </h3>
+            <br>
+            <div id="camera"></div>
+            <br><br>
+            <h3 style="color: white;font-weight: bold; border: 1px solid blue; background: darkorange; border-top-left-radius: 15px; border-top-right-radius: 15px; width: 80%;">Result - </h3>
+            <br>
+            <div id="result"></div>
+            <br><br>
+            <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button>
+            <br><br>
+            <button onclick="check();" class="btn btn-success">Identify Image</button>
+            <br><br>
+            <h4 style="font-size: 24px; color: blue;">Object :  <span id="result_object_name"></span> </h4>
+            <br><br>
+            <h4 style="font-size: 24px; color: blue;">Accuracy : <span id="result_object_accuracy"></span> </h4>
+            <br><br>            
+        </center>
+        <script src="main.js"></script>
+    </body>
+
+</html>
